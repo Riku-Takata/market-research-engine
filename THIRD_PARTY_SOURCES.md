@@ -43,3 +43,14 @@
 | rights.eligible_use | unverified(利用目的の制限を読めていない。Acceptable Use Policies の情報の利用の節を確かめる) | 未確認 | - | - |
 | rights.documentation_url | unverified(根拠にした公式ページがまだない) | 未確認 | - | - |
 | rights.last_reviewed_at | unverified(公式ページを読めていないため審査日を記録しない) | 未確認 | - | - |
+
+## LLM
+
+OpenAI 互換 API と Ollama の公式ドキュメントのページを直接開いて読むことができなかったため、全行を `未確認` とした。値は素案の値で、Web 検索の要約(公式ページそのものではない)とは矛盾しなかったが、公式ページの記述で確かめるまでは `確認済み` にしない。確認日と URL は、読んだページがないため `-` とし、確かめる候補のページは値の欄に書いた。
+
+| 項目 | 値 | 状態 | 確認日 | URL |
+|---|---|---|---|---|
+| response_format_json_schema | unverified(素案: Chat Completions の response_format が type=json_schema と json_schema オブジェクト(name、schema、strict)を受け付ける。必須のキーは読めていない。確かめる候補: https://platform.openai.com/docs/api-reference/chat/create 、https://platform.openai.com/docs/guides/structured-outputs) | 未確認 | - | - |
+| response_format_json_object | unverified(素案: type=json_object を受け付ける。指示文に「JSON」の語が必要かは読めていない。確かめる候補: https://platform.openai.com/docs/guides/structured-outputs) | 未確認 | - | - |
+| max_tokens_field | unverified(素案: max_tokens。max_completion_tokens が推奨か、モデルによって max_tokens を受け付けないかは読めていない。設定の既定値と異なる可能性がある。確かめる候補: https://platform.openai.com/docs/api-reference/chat/create) | 未確認 | - | - |
+| ollama_json_schema | unverified(素案: /v1/chat/completions が response_format の json_schema に対応している。json_object への対応と、max_tokens と max_completion_tokens のどちらを受け付けるかは読めていない。確かめる候補: https://docs.ollama.com/api/openai-compatibility) | 未確認 | - | - |
